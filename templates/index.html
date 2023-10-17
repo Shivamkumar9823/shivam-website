@@ -4,15 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="static/style.css">
+    <!-- <link rel="stylesheet" href="static/style.css"> -->
+    <style>
+        h1,h2{
+            text-align: center;
+            color: rgb(100, 100, 100);
+        }
+        section{
+            display: flex;
+            justify-content: space-around;
+        }
+        button{
+            height: 20px;
+        }
+        #banner{
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+        }
+        .container{
+            max-width: 720px;
+            margin: 0 auto 0 auto;
+
+        }
+    </style>
 </head>
 <body>
-    <form>
-        <input type="text" id="data" placeholder="username">
-        <input type="text" name="password" placeholder="password">
-        <button>Submit</button>
-    </form>
+    <div class="container">
+   <h1>Intern Shala</h1>
+   <img id="banner" src="static/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="">
+   <h2>Types of JOBS available</h2>
+   <p>ipsum dolor sit, amet consectetur adipisicing elit. Magni voluptatem, temporibus reprehenderit non, nobis dolores ex doloremque tempora quae nihil hic in laborum eveniet rem expedita molestiae alias, quasi sequi itaque vitae maiores dolorum! Ratione quisquam doloribus pariatur et laudantium porro a  architecto obcaecati, eum nemo ex!</p>
+<h2>JOB OPENINGS</h2>
+ <div>
+     {% for job in jobs %}
+       {% include 'jobitems.html'%}
+     {% endfor %}
+ </div>
+<!-- <section>
+    <p>Data analyst</p>
+    <button>Apply NOW</button>
+</section>
+<hr>
+<section>
+    <p>Backend Developer</p>
+    <button>Apply NOW</button>
+</section>
+<hr>
+<section>
+    <p>Data Scientist</p>
+    <button>Apply NOW</button>
+</section>
+<hr>
+<section>
+    <p>Full stack Developer</p>
+    <button>Apply NOW</button>
+</section> 
+ <hr> -->
 
-    <script src="static/index.js"></script>
+<div style="text-align: center;">
+    <button>Contact Us</button>
+</div>
+</div>
 </body>
 </html>
