@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <!-- <link rel="stylesheet" href="static/style.css"> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <style>
-        h1,h2{
-            text-align: center;
-            color: rgb(100, 100, 100);
-        }
-        section{
-            display: flex;
-            justify-content: space-around;
-        }
-        button{
-            height: 20px;
-        }
-        #banner{
-            width: 100%;
-            height: 360px;
-            object-fit: cover;
-        }
-        .container{
-            max-width: 720px;
-            margin: 0 auto 0 auto;
-
-        }
+      h1,
+      h2 {
+        text-align: center;
+        color: rgb(100, 100, 100);
+      }
+      section {
+        display: flex;
+        justify-content: space-around;
+      }
+      #banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+      .container {
+        /* max-width: 720px; */
+        margin: 0 auto 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div>
+      {% include 'navbar.html' %}
+    </div>
     <div class="container">
-   <h1>Intern Shala</h1>
-   <img id="banner" src="static/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="">
-   <h2>Types of JOBS available</h2>
-   <p>ipsum dolor sit, amet consectetur adipisicing elit. Magni voluptatem, temporibus reprehenderit non, nobis dolores ex doloremque tempora quae nihil hic in laborum eveniet rem expedita molestiae alias, quasi sequi itaque vitae maiores dolorum! Ratione quisquam doloribus pariatur et laudantium porro a  architecto obcaecati, eum nemo ex!</p>
-<h2>JOB OPENINGS</h2>
- <div>
-     {% for job in jobs %}
-       {% include 'jobitems.html'%}
-     {% endfor %}
- </div>
-<!-- <section>
-    <p>Data analyst</p>
-    <button>Apply NOW</button>
-</section>
-<hr>
-<section>
-    <p>Backend Developer</p>
-    <button>Apply NOW</button>
-</section>
-<hr>
-<section>
-    <p>Data Scientist</p>
-    <button>Apply NOW</button>
-</section>
-<hr>
-<section>
-    <p>Full stack Developer</p>
-    <button>Apply NOW</button>
-</section> 
- <hr> -->
+      <h1>Intern Shala</h1>
+      <img
+        id="banner"
+        src="static/clark-tibbs-oqStl2L5oxI-unsplash.jpg"
+        alt=""
+      />
+      <h2>Types of JOBS available</h2>
+      <p>
+        ipsum dolor sit, amet consectetur adipisicing elit. Magni voluptatem,
+        temporibus reprehenderit non, nobis dolores ex doloremque tempora quae
+        nihil hic in laborum eveniet rem expedita molestiae alias, quasi sequi
+        itaque vitae maiores dolorum! Ratione quisquam doloribus pariatur et
+        laudantium porro a architecto obcaecati, eum nemo ex!
+      </p>
+      <h2>JOB OPENINGS</h2>
+      <div>
+        {% for job in jobs %}
+         {% include 'jobitems.html'%}
+          {% endfor %}
+        </div>
 
-<div style="text-align: center;">
-    <button>Contact Us</button>
-</div>
-</div>
-</body>
+      <div style="text-align: center">
+        <button class="btn btn-outline-danger">Contact Us</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
 </html>

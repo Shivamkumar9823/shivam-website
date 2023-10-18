@@ -1,14 +1,17 @@
-<div>
-
-    <h4 style="color: rgb(120, 120, 120); margin-bottom: 4px;"> {{job['Title']}}</h4>
+<div class="row">
+  <div class="col-9">
+    <h4 style="color: rgb(120, 120, 120); margin-bottom: 4px">
+      {{job['Title']}}
+    </h4>
 
     <div><b>Location :</b> {{job['Location']}}</div>
 
     {% if 'Salary' in job %}
-    <div><b>salary :</b> {{job['Salary']}} </div>
+    <div><b>salary :</b> {{job['Salary']}}</div>
     {% endif %}
-    <button>Apply Now</button>
-    <hr>
-
-
- </div>
+  </div>
+  <div class="col-3">
+    <a  href="mailto:{{job['email']}}  ?subject=Application for the post {{job['Title']}}" type="button" class="btn btn-outline-primary ">Apply Now</a>
+  </div>
+  <hr />
+</div>
